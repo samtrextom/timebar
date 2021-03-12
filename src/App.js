@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import TimeBar from './Timebar';
+import DateToPercent from './DateToPercent';
+import DateTimeToPercent from './DateTimeToPercent'
+import TimeIncrements from './TimeIncrements';
+import TimeConvertor from './TimeConvertor'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display:'flex', width:'100%', justifyContent:'center',backgroundColor:'#e3e3e3'}}>
+      <div style={{display:'block'}}>
+        <h1>Percent of Year Remaining (POYR)</h1>
+        <TimeBar/>
+        <TimeIncrements/>
+        <DateToPercent/>
+        <DateTimeToPercent/>
+        <TimeConvertor/>
+      </div>
     </div>
   );
 }
